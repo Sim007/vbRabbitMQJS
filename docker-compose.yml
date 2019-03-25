@@ -1,0 +1,26 @@
+version: "2"
+services:
+
+  rabbitMQ:
+    image: rabbitmq:3-management-alpine
+    hostname: vbRabbitMQ
+    environment:
+      RABBITMQ_NODENAME: vbRabbitMQ
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+      
+    ports:
+      - "4369:4369"
+      - "5671:5671"
+      - "5672:5672"
+      - "15671:15671"
+      - "15672:15672"
+      - "25672:25672"
+    networks:
+      vbRabbitMQnetwork:
+      
+networks:
+  vbRabbitMQnetwork:
+    driver: bridge
+
+    

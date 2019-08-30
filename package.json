@@ -1,0 +1,16 @@
+{
+  "name": "vbrabbitmqjs",
+  "version": "1.0.0",
+  "description": "Show RabbitMQ",
+  "main": "y",
+  "dependencies": {
+    "amqplib": "^0.5.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "send": "node ./src/1Helloworld/send.js",
+    "rec": "node ./src/1Helloworld/receive.js"
+  },
+  "author": "Johannes Sim - OSS example to show",
+  "license": "ISC"
+}

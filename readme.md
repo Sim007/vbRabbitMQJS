@@ -40,7 +40,6 @@ If there a user defined network we can use the name of the container.
 You can send and receive message from this directory with
 ``` 
 node run send
-
 node run receive
 ```
 Note: you need npm, nodejs on your laptop and run npm i

@@ -3,9 +3,9 @@ services:
 
   rabbitMQ:
     image: rabbitmq:3-management-alpine
-    hostname: vbRabbitMQ
+    hostname: my-rabbit
     environment:
-      RABBITMQ_NODENAME: vbRabbitMQ
+      RABBITMQ_NODENAME: my-rabbit
       RABBITMQ_DEFAULT_USER: guest
       RABBITMQ_DEFAULT_PASS: guest
       

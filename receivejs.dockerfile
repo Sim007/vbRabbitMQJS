@@ -7,6 +7,7 @@ COPY ./src/1HelloWorldinC ./src/1HelloWorld
 EXPOSE 5672
 CMD [ "node", "./src/1HelloWorld/receive.js" ]
 
+# build: docker build -f receivejs.dockerfile -t receivejs2myrabbit .
+# run:   docker container run -e HOSTNAME=<IP> receivejs2myrabbit
 
-# docker build -f receivejs.dockerfile -t receivejs2rabbit .
-# docker container run receivejs2rabbit
+# in:    docker container run -it -e HOSTNAME=<IP> receivejs2myrabbit sh

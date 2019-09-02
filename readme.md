@@ -53,23 +53,28 @@ Make a container to receive messages
 docker build -f receivejs.dockerfile -t receivejs2myrabbit .
 ```
 Run the container with:
-``` dockerfile
-docker container run receivejs2rabbit
+``` docker
+docker container run -e HOSTNAME=<IP> receivejs2myrabbit
 ```
 You can go in the container with
 ``` dockerfile
-docker container run -it receivejs2myrabbit sh
+docker container run -it -e HOSTNAME=<IP> receivejs2myrabbit sh
 ```
-Note: 
-You use IP adress in js files
-You can find the IP adress of RabbitMQ with
-``` Dockerfile
-docker inspect my-rabbit 
-```
-If there a user defined network we can use the name of the container.
+The output sould be:
 
-# local send and receive
-You can send and receive message from this directory with
+The above IP address for the env and node.js variable and the messages:
+
+[*] Waiting for messages in hello. To exit press CTRL+C
+[x] Received Hello World!
+....
+
+You check this in your rabbit-mq with:
+``` Docker
+http://localhost:15672/#/queues
+```
+
+## local send and receive (on laptop)
+You can send and receive message from the directory 1HelloWorld with
 ``` 
 node run send
 node run receive

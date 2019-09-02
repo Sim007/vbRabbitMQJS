@@ -6,8 +6,6 @@ console.log('env variable     : ' + process.env.HOSTNAME);
 console.log('node.js variable : ' + hostname);
 console.log(' ');
 
-
-//amqp.connect('amqp://172.17.0.2', function(err, conn) {
 amqp.connect('amqp://'+ hostname, function(err, conn) {
   conn.createChannel(function(err, ch) {
     var q = 'hello';

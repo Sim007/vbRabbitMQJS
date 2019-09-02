@@ -1,6 +1,6 @@
 # OSS Example of RabbitMQ running in a container
 
-# Sending and receiving hello-world
+## Sending and receiving hello-world
 In this example you can send and receive hello-world message to RabbitMQ in a container.
 
 We will use 3 contaners on 1 DockerHost.
@@ -26,10 +26,10 @@ If you do not want to find address in the output. You can give:
 docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' my-rabbit
 ```
 
-# send message in a container
+## send message in a container
 Make a empheral container to send a message with:
 ``` dockerfile
-docker build -f sendjs.dockerfile -t sendjs2rabbit .
+docker build -f sendjs.dockerfile -t sendjs2myrabbit .
 ```
 
 Run the container with, fill above found IP adress in <IP>:
@@ -37,8 +37,9 @@ Run the container with, fill above found IP adress in <IP>:
 docker container run -e HOSTNAME= <IP> sendjs2myrabbit
 ```
 The output sould be:
-The above IP address for the env and node.js variable.
-and the message:
+
+The above IP address for the env and node.js variable and the message:
+
 [x] Sent Hello World!
 
 You check this in your rabbit-mq with:
@@ -46,7 +47,7 @@ You check this in your rabbit-mq with:
 http://localhost:15672/#/queues
 ```
 
-# receive messages in a container
+## receive messages in a container
 Make a container to receive messages
 ``` dockerfile
 docker build -f receivejs.dockerfile -t receivejs2myrabbit .
@@ -57,7 +58,7 @@ docker container run receivejs2rabbit
 ```
 You can go in the container with
 ``` dockerfile
-docker container run -it receivejs2rabbit sh
+docker container run -it receivejs2myrabbit sh
 ```
 Note: 
 You use IP adress in js files

@@ -2,8 +2,8 @@
 
 var amqp = require('amqplib/callback_api');
 const hostname = process.env.HOSTNAME;
-console.log('hostname variable: ' + hostname);
 console.log('env variable     : ' + process.env.HOSTNAME);
+console.log('node.js variable : ' + hostname);
 console.log(' ');
 
 

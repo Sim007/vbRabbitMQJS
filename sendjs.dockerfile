@@ -8,7 +8,7 @@ EXPOSE 5672
 CMD [ "node", "./src/1HelloWorld/send.js" ]
 
 
-# build: docker build -f sendjs.dockerfile -t sendjs2rabbit .
-# run:   docker container run -e HOSTNAME='172.17.0.2' sendjs2rabbit
+# build: docker build -f sendjs.dockerfile -t sendjs2myrabbit .
+# run:   docker container run -e HOSTNAME=<IP> sendjs2myrabbit
 
-# in:    docker container run -it -e HOSTNAME='172.17.0.2' sendjs2rabbit sh 
+# in:    docker container run -it -e HOSTNAME=<IP> sendjs2myrabbit sh 

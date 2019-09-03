@@ -1,15 +1,15 @@
 # OSS Example of RabbitMQ running in a container
 
 ## Sending and receiving hello-world
-In this example you can send and receive hello-world message to RabbitMQ in a container.
+In this example we will send and receive hello-world message to and from RabbitMQ.
 
-We will use 3 contaners on 1 DockerHost.
+We will use 3 containers (RabbitMQ, send, receive) on 1 DockerHost.
 We have to provide the send and receive container with a IP Address.
 
-
+## RabbitMQ container
 Start the container with
 ``` 
-docker run -d --hostname my-rabbit --name my-rabbit -p 4369:4369 -p 5671:5671 -p 5672:5672 -p 15671:15671 -p 15672:15672 -p 25672:25672 rabbitmq:3-management-alpine
+docker run -d --hostname myrabbit --name myrabbit -p 4369:4369 -p 5671:5671 -p 5672:5672 -p 15671:15671 -p 15672:15672 -p 25672:25672 rabbitmq:3-management-alpine
 ```
 You check the RabbitMQ management interface in browser with:
 

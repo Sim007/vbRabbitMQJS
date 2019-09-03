@@ -1,7 +1,16 @@
 # OSS Example of RabbitMQ running in a container
 
+## learning goals:
+We learn the following:
+- run RabbitMQ container with different options and env
+- See the userinterface and get a IP adress 
+- build a send container image and run it with IP adress with env
+- build a receive container image and run it
+
+You can run this assignment in Docker Desktop.
+
 ## Sending and receiving hello-world
-In this example we will send and receive hello-world message to and from RabbitMQ.
+In this assignment we will a send and receive hello-world message to and from RabbitMQ.
 
 We will use 3 containers (RabbitMQ, send, receive) on 1 DockerHost.
 We have to provide the send and receive container with a IP Address.

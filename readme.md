@@ -38,7 +38,7 @@ For send and recieve container you need the IP address of the RabbitMQ container
 You can find the IP address with the docker inspect command.
 If you do not want to find address in the output. You can give:  
 ```
-docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' my-rabbit
+docker inspect --format='{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' myrabbit
 ```
 
 ## send message in a container

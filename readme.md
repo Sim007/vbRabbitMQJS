@@ -11,7 +11,8 @@ You can run this assignment in Docker Desktop.
 
 ## Copy code
 Git clone this directory or download the zip.
-``` git clone https://github.com/Sim007/vbRabbitMQJS.git
+``` powershell
+git clone https://github.com/Sim007/vbRabbitMQJS.git
 ```
 
 ## Sending and receiving hello-world
@@ -58,7 +59,7 @@ The above IP address for the env and node.js variable and the message:
 [x] Sent Hello World!
 
 You check this in your rabbit-mq with:
-``` Docker
+``` 
 http://localhost:15672/#/queues
 ```
 

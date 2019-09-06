@@ -52,7 +52,7 @@ The dockerfile you can find in the root of directory and the source of send.js y
 
 Run the container with, fill above found IP adress in <IP>:
 ``` docker
-docker container run -e HOSTNAME= <IP> sendjs2myrabbit
+docker container run -e HOSTNAME=<IP> sendjs2myrabbit
 ```
 The output sould be:
 

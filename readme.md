@@ -93,13 +93,7 @@ You check this in your rabbit-mq with:
 http://localhost:15672/#/queues
 ```
 
-## local send and receive (on laptop)
-You can send and receive message from the directory 1HelloWorld with
-``` 
-node run send
-node run receive
-```
-Note: you need npm, nodejs on your laptop and run npm i
+
 
 
 

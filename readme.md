@@ -42,7 +42,9 @@ docker inspect --format='{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}
 ```
 
 ## send message in a container
-Make a empheral container to send a message with:
+Goto the directory in your cloned repo.
+
+Make an empheral container to send a message with:
 ``` dockerfile
 docker build -f sendjs.dockerfile -t sendjs2myrabbit .
 ```

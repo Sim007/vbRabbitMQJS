@@ -1,5 +1,11 @@
 # OSS Example of RabbitMQ running in a container
 
+## Sending and receiving hello-world
+In this assignment we will a send and receive hello-world message to and from RabbitMQ.
+
+We will use 3 containers (RabbitMQ, send, receive) on 1 DockerHost.
+We have to provide the send and receive container with a IP Address.
+
 ## learning goals:
 We learn the following:
 - run RabbitMQ container with different options and env
@@ -14,12 +20,8 @@ Git clone this directory or download the zip.
 ``` powershell
 git clone https://github.com/Sim007/vbRabbitMQJS.git
 ```
-
-## Sending and receiving hello-world
-In this assignment we will a send and receive hello-world message to and from RabbitMQ.
-
-We will use 3 containers (RabbitMQ, send, receive) on 1 DockerHost.
-We have to provide the send and receive container with a IP Address.
+In the directory there is copy of code you can find on:
+https://www.rabbitmq.com/getstarted.html. We will use the nodejs example.
 
 ## RabbitMQ container
 Start the container with

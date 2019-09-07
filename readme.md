@@ -26,7 +26,7 @@ https://www.rabbitmq.com/getstarted.html. We will use the nodejs example.
 ## RabbitMQ container
 On docker Hub we can find the official Docker image for RabbitMQ.
 
-There are lot container images available. We will use the the tag management and based on alpine. So we will get a smaller container image and we have management interface.
+There are a lot of container images available. We will use the the tag management and based on alpine. So we will get a smaller container image and we have management interface plugin.
 
 Start the container with
 ``` 

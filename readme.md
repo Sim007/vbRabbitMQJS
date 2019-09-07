@@ -6,8 +6,8 @@ In this assignment we will a send and receive hello-world message to and from Ra
 We will use 3 containers (RabbitMQ, send, receive) on 1 DockerHost.
 We have to provide the send and receive container with a IP Address.
 
-## learning goals:
-We learn the following:
+## learning goals
+We learn will the following:
 - run RabbitMQ container with different options and env
 - See the userinterface and get a IP adress 
 - build a send container image and run it with IP adress with env
@@ -24,6 +24,10 @@ In the directory there is copy of code you can find on:
 https://www.rabbitmq.com/getstarted.html. We will use the nodejs example.
 
 ## RabbitMQ container
+On docker Hub we can find the official Docker image for RabbitMQ.
+
+There are lot container images available. We will use the the tag management and based on alpine. So we will get a smaller container image and we have management interface.
+
 Start the container with
 ``` 
 docker run -d --rm --hostname myrabbit --name myrabbit -p 4369:4369 -p 5671:5671 -p 5672:5672 -p 15671:15671 -p 15672:15672 -p 25672:25672 rabbitmq:3-management-alpine
@@ -36,9 +40,20 @@ localhost:15672
 You can use guest/guest
 In the queue tab you will see hello queue.
 
+If you want to change the user and password on runtime you can add the following env variabele:
+
+```
+-e RABBITMQ_DEFAULT_USER=<user> -e RABBITMQ_DEFAULT_PASS=<password>
+```
+
 For send and recieve container you need the IP address of the RabbitMQ container named my-rabbit.
+
+```
+docker inspect --format='{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' myrabbit
+```
+
 You can find the IP address with the docker inspect command.
-If you do not want to find address in the output. You can give:  
+If you want to find address specific in the output. You can give:  
 ```
 docker inspect --format='{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' myrabbit
 ```

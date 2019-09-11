@@ -77,7 +77,7 @@ The output should be:
 
 The above IP address for the env and node.js variable and the message:
 
-[x] Sent Hello World!
+[x] Sent Hello World!  
 
 You can check this in your rabbitmq with:
 ``` 
@@ -95,23 +95,23 @@ Run the container with:
 ``` docker
 docker container run -e HOSTNAME=<IP> receivejs2myrabbit
 ```
-You can go into the container with to check the container
-``` dockerfile
-docker container run -it receivejs2myrabbit sh
-```
+
 The output sould be:
 
 The above IP address for the env and node.js variable and the messages:
 
 [*] Waiting for messages in hello. To exit press CTRL+C  
-[x] Received Hello World!
+[x] Received Hello World!  
 ....
-
+  
 You check this in your rabbitmq with:
 ``` Docker
 http://localhost:15672/#/queues
 ```
-
+You can go into the container with
+``` dockerfile
+docker container run -it receivejs2myrabbit sh
+```
 
 
 

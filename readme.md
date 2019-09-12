@@ -9,7 +9,8 @@ We have to provide the send and receive container with an IP Address.
 ## Learning goals
 We will learn the following:
 - run RabbitMQ container with different options and env
-- See the userinterface and get an IP address 
+- see the rabbitMQ userinterface
+- get an IP address 
 - build a send container image and run it
 - build a receive container image and run it
 
@@ -47,7 +48,7 @@ If you want to change the user and password on runtime you can add the following
 -e RABBITMQ_DEFAULT_PASS=<password>
 ```
 
-For the send and recieve containers you need the IP address of the RabbitMQ container named my-rabbit.
+For the send and recieve containers you need the IP address of the RabbitMQ container named myrabbit.
 
 You can find the IP address with the docker inspect command.
 

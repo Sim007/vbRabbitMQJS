@@ -1,7 +1,7 @@
 version: "2"
 services:
 
-  rabbitMQ:
+  myrabbit:
     image: rabbitmq:3-management-alpine
     hostname: myrabbit
     environment:
@@ -17,10 +17,10 @@ services:
       - "15672:15672"
       - "25672:25672"
     networks:
-      vbRabbitMQnetwork:
+      myrabbitnetwork:
       
 networks:
-  vbRabbitMQnetwork:
+  myrabbitnetwork:
     driver: bridge
 
     

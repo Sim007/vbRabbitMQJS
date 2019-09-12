@@ -22,7 +22,7 @@ Git clone this directory or download the zip.
 git clone https://github.com/Sim007/vbRabbitMQJS.git
 ```
 In the directory there is a copy of code you can find on:
-https://www.rabbitmq.com/getstarted.html. We will use the nodejs example.
+https://www.rabbitmq.com/getstarted.html. We will use the node.js example.
 
 ## RabbitMQ container
 On Docker Hub we can find the official Docker image for RabbitMQ.

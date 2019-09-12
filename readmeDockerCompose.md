@@ -65,3 +65,15 @@ You can go into the container with
 docker container run -it receivejs2myrabbit sh
 ```
 
+## Clean your things
+```
+docker-compose down
+```
+If there some containers left you can also delete all containers with:
+```
+docker container rm -f $(docker container ls -aq)
+```
+If the network is not deleted give:
+```
+docker network prune -f
+```

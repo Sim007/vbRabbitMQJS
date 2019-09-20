@@ -23,4 +23,7 @@ networks:
   vbRabbitMQnetwork:
     driver: bridge
 
+# docker-compose -d up
+# docker-compose down
+
     

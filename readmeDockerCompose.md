@@ -4,7 +4,7 @@ You can also start RabbitMQ with a docker-compose file
 
 You can run the docker-compose file with:
 ```
-docker-compose -d up
+docker-compose up -d
 ```
 
 ## Send messages
@@ -25,9 +25,3 @@ docker container run -e HOSTNAME=myrabbit --network vbrabbitmqjs_vbRabbitMQnetwo
 ```
 Note:
 HOSTNAME = name the service in the docker-compose
-
-
-
-
-
-

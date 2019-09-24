@@ -27,7 +27,7 @@ docker build -f sendjs.dockerfile -t sendjs2myrabbit .
 
 docker-compose added a docker network so we can use this network to send messages.
 
-Find the name of the bridge network (something with "rabbitmq":
+Find the name of the bridge network (something rabbitmq) with:
 ```
 docker network ls
 ```

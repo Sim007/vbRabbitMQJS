@@ -1,4 +1,4 @@
-version: "2"
+version: "2.4"
 services:
 
   myrabbit:
@@ -25,5 +25,7 @@ networks:
 
 # docker-compose -d up
 # docker-compose down
+
+# docker-compose config
 
     

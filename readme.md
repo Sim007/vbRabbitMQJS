@@ -61,7 +61,7 @@ If you only want to find the IP address you can give:
 docker inspect --format='{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' myrabbit
 ```
 
-## Send message in a container
+## Send message container
 Go to the directory in your cloned repo.
 
 Make an ephemeral container to send a message with:
@@ -85,7 +85,7 @@ You can check this in your rabbitmq with:
 http://localhost:15672/#/queues
 ```
 
-## Receive messages in a container
+## Receive messages container
 Make a container to receive messages
 ``` dockerfile
 docker build -f receivejs.dockerfile -t receivejs2myrabbit .

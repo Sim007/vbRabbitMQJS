@@ -1,4 +1,4 @@
-## OSS Example RabbitMQ with Docker-compose
+# OSS Example RabbitMQ with Docker-compose
 
 ## Do / learning goals
 We will learn the following
@@ -7,7 +7,7 @@ We will learn the following
 - build and run in a container: send hello world to RabbitMQ
 - Check your RabbitMQ 
 
-# Use docker-compose for RabbitMQ container
+## Use docker-compose for RabbitMQ container
 You can also start RabbitMQ with a docker-compose file.
 
 Build your mydocker-compose.yaml file based on the command

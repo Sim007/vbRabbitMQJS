@@ -1,0 +1,37 @@
+## playing around!! - use with care
+apiVersion: v1
+kind: Service
+metadata:
+  name: myrabbit
+spec:
+  selector:
+    app: myrabbit
+  ports:
+  - protocol: TCP
+    port: 15672
+    targetPort: 15672  
+  type: LoadBalancer
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: myrabbit
+spec:
+  selector:
+    matchLabels:
+      app: myrabbit
+  serviceName: "myrabbit"
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: myrabbit
+    spec:
+      containers:
+      - name: myrabbit
+        image: rabbitmq:3-management-alpine
+        ports:
+        - containerPort: 25672
+        - containerPort: 5672
+        - containerPort: 4369
+        - containerPort: 15672

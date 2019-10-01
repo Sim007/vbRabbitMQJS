@@ -1,0 +1,23 @@
+## playing around!! - use with care
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: send2myrabbit-app
+  labels:
+    app: send2myrabbit-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sendjs2myrabbit-app
+  template:
+    metadata:
+      labels:
+        app: sendjs2myrabbit-app
+    spec:
+      containers:
+      - name: sendjs2myrabbit-app
+        image: sim007/sendjs2myrabbit
+        env:
+        - name:  HOSTNAME
+          value: '10.111.216.37'

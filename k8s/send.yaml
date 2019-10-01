@@ -1,0 +1,15 @@
+## playing around!! - use with care
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: send2myrabbit
+spec:
+  template:
+    spec:
+      containers:
+      - name: sendjs2myrabbit
+        image: sim007/sendjs2myrabbit
+        env:
+        - name:  HOSTNAME
+          value: myrabbit
+      restartPolicy: Never  

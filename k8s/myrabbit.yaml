@@ -1,4 +1,4 @@
-## playing around!! - use with care
+# Example k8s for RabbitMQ
 apiVersion: v1
 kind: Service
 metadata:

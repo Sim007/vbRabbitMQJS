@@ -1,4 +1,4 @@
-## playing around!! - use with care
+## example k8s for send
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -6,7 +6,7 @@ metadata:
   labels:
     app: send2myrabbit-app
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: sendjs2myrabbit-app
@@ -20,4 +20,4 @@ spec:
         image: sim007/sendjs2myrabbit
         env:
         - name:  HOSTNAME
-          value: '10.111.216.37'
+          value: '10.1.1.4'
